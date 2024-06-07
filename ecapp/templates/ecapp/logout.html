@@ -1,0 +1,10 @@
+{% extends "ecapp/base.html" %}
+{% load static %}
+{% block title %}logout{% endblock title %}
+{% block main-content %}
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">Logout</button>
+</form>
+
+{% endblock main-content %} 
